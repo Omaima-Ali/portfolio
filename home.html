@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="omaima"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    </head>    
+    <header>
+        <h1 style="background-color: black; color:white;">MY PORTFOLIO</h1>
+        <nav class="nav-panel">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+              <li><a href="#" onclick="openSection('about')">ABOUT</a></li>
+            <li><a href="#" onclick="openSection('resume')">RESUME</a></li>
+            <li><a href="#" onclick="openSection('my_work')">MY WORK</a></li>
+            <li><a href="#" onclick="openSection('contact')">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+     <section id="home" class="home">
+        <div  class="center-container">
+           <h1 class="name">Hafiza Omaima Ali<br></h1>
+           <br><br>
+          <p class="typewriter-line">
+  I'm <span id="typewriter-container">
+    <span id="typewriter-text">a FREELANCER</span>
+    <span class="cursor">|</span>
+  </span>
+</p>
+
+ <script>
+  const texts = ["a FREELANCER", "a WEB DEVELOPER", "a PROGRAMMER", "an ARTIST"];
+  let index = 0;
+  const textEl = document.getElementById("typewriter-text");
+  const cursorEl = document.querySelector(".cursor");
+
+  function animateCursorEraseWrite(newText) {
+    const textLength = textEl.textContent.length;
+    let pos = textLength;
+    const erase = setInterval(() => {
+      textEl.textContent = textEl.textContent.slice(0, -1);
+      pos--;
+      cursorEl.style.left = `${textEl.offsetWidth}px`;
+
+      if (pos <= 0) {
+        clearInterval(erase);
+        setTimeout(() => {
+        let newPos = 0;
+        const write = setInterval(() => {
+          textEl.textContent += newText.charAt(newPos);
+          newPos++;
+          cursorEl.style.left = `${textEl.offsetWidth}px`;
+
+          if (newPos >= newText.length) {
+            clearInterval(write);
+          }
+        }, 30); 
+      },500);
+    }
+    }, 30); 
+  }
+
+  function cycleText() {
+    index = (index + 1) % texts.length;
+    animateCursorEraseWrite(texts[index]);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setInterval(cycleText, 3000); 
+  });
+</script>
+
+
+            </div>
+            <div class="top-right-image">
+                <img src="pic1.jfif" alt="Profile Picture">
+              </div>
+<div class="social-links"> 
+    <a href="https://www.instagram.com/_.omaewaa._?igsh=MXhzNDhudGZ3dmc4aw==" target="_blank" class="social-link">
+      <img src="https://www.citypng.com/public/uploads/preview/hd-white-outline-round-instagram-logo-icon-png-7017516951188810uvfjvesqu.png" alt="Instagram" class="social-icon">
+         Omaimaalee</a>
+    <a href="https://wa.me/923355603135" target="_blank" class="social-link">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqbxIU8RM295Jp-w78HnkeFM93h0n06JOeVQ&s" class="social-icon" alt="WhatsApp">+923355603135
+      </a>
+      
+      <a href="https://mail.google.com/mail/?view=cm&to=omaewaali123@gmail.com" target="_blank" class="social-link">
+        <img src="https://img.icons8.com/ios_filled/512/FFFFFF/gmail-new.png" class="social-icon" alt="Gmail">omaewaali123@gmail.com
+      </a>
+      
+    <a href="https://github.com/Omaima-Ali" target="_blank" class="social-link">
+      <img src="https://icon-library.com/images/github-icon-white/github-icon-white-5.jpg" alt="GitHub" class="social-icon">Omaima-Ali
+    </a>
+  </div>            
+     </section>
+
+
+<!--about-->
+   <section id="about" class="slide-section">
+  <span class="close-btn" onclick="closeSection()">×</span>
+  
+
+    <script>
+    function openSection(id) {
+      document.getElementById(id).classList.add("active");
+    }
+
+    function closeSection() {
+      const sections = document.querySelectorAll(".slide-section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+    }
+     document.addEventListener("DOMContentLoaded", type);
+  </script>
+
+  <div class="top_heading">
+    <h1 style="color:white;">About Me</h1>
+  </div>
+  <div class="animated-line"></div>
+
+  <div class="container">
+  <div class="left-box"  >
+   <img class="image"src="C:\Users\Moon Computer\OneDrive\Desktop\portfolio\pic1.jfif">
+  </div>
+  <div class="right-box">
+     <p >I'm Omaima Ali, a Graphic Designer and a Web Developer</p><br>
+      <p> I'm currently pursuing a Bachelor's degree in Computer Engineering Technology at the International Islamic University, Islamabad. I'm new to Freelancing. I have a strong interest in programming and have learned the basics of C++, web development, and graphic design. I'm actively working on enhancing these skills</p><br>
+       <p>Alongside my technical background, I’m also a self-taught artist with a passion for sketching and watercolor painting.</p>     <hr class="hr_style">  
+       <div class="info-section">
+  <div class="info-columns">
+    <div class="column">
+      <p style="color:white;font-size:1.2rem;">Name: Omaima Ali</p><br>
+      <p>Age: 19</p>
+    </div>
+    <div class="column">
+      <p style="color:white;font-size:1.2rem;">Email:<span class="email">omaewaali123@gmail.com</span></p><br>
+      <p>From: Wah,Pakistan</p>
+    </div>
+  </div>
+
+  <div class="cv-social">
+    
+     <a href="CV.docx"><button class="cv-button">Download CV</button></a>
+   
+</div>
+
+  </div>
+</div>
+
+  </section>
+
+  <!--Resume-->
+
+
+     <section id="resume" class="slide-section">
+  <span class="close-btn" onclick="closeSection()">×</span>
+  <div class="top_heading">
+    <h1 style="color:white;">Resume</h1>
+  </div>
+ <div class="animated-line"></div>
+   <div class="container">
+  <div class="G-left-box"  >
+    <div class="marker"></div>
+    <h1 style="position:fixed; ;">Education</h1><br><br>
+     <div class="content">
+    <h3>ICS</h3><br>
+      <p>Scholar Science College / 2021 - 2023</p>
+   </div>
+   <div class="content">
+        <div class="marker"></div>
+    <h3>BSc Computer Engineering Technology</h3> <br>
+      <p>International Islamic University / currently Enroll</p>
+   
+   </div>
+   
+  </div>
+ <div class="G-right-box"  >
+    <div class="marker"></div>
+    <h1 style="position:fixed; margin-left:7px ;">My Skills</h1><br><br>
+     <div class="content">
+     <p class="subtitle">My level of knowledge in some tools</p><br>
+      <div class="skills-container">
+  <div class="skill">
+    <div class="skill-label">
+      <span class="skill-name">HTML/CSS</span>
+      <span class="skill-percent" style="left: 95%;">95%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 95%;"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-label">
+      <span class="skill-name">JavaScript</span>
+      <span class="skill-percent" style="left: 80%;">80%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 80%;"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-label">
+      <span class="skill-name">PHP</span>
+      <span class="skill-percent" style="left:70%;">70%</span>
+    </div>
+    <div class="progress-bar">
+    <div class="progress" style="width:70%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-label">
+      <span class="skill-name">SQL</span>
+      <span class="skill-percent" style="left:80%;">80%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width:80%"></div>
+    </div>
+  </div>
+  <div class="skill">
+    <div class="skill-label">
+      <span class="skill-name">C++</span>
+      <span class="skill-percent" style="left:90%;">90%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width:90%"></div>
+    </div>
+  </div>
+</div>
+
+   </div>
+   
+   
+  </div>
+  </section>
+
+  <!--My Work-->
+  <section id="my_work" class="slide-section">
+    <span class="close-btn" onclick="closeSection()">x</span>
+    <div class="top_heading">
+    <h1 style="color:white;">My Work</h1>
+  </div>
+ <div class="animated-line"></div>
+ <p class="subtitle" style="position: absolute; top:25%">Showcasing some of my work</p><br>
+ 
+<div class="categories">
+ <span class="filter active" data-category="all">All</span>
+  <span class="filter" data-category="coding" >Coding</span>
+  <span class="filter" data-category="art">Art</span>
+</div>
+
+ <div class="W-container">
+ <div class="gallery" >
+  <div class="gallery-item" data-category="coding">
+   <p class="project-title">Calculator</p>
+    <img src="calculator.jpg" alt="Project 1" />
+    <div class="overlay">
+      <h5>Project 1</h5>
+      <button onclick="openLightbox(1)">More Info</button>
+       <a href="calculator.exe" download>Download</a>
+    </div>
+  </div>
+
+  <div class="gallery-item" data-category="coding">
+   <p class="project-title">Record System</p>
+    <img src="players-record-system.jpg" alt="Project 2" />
+    <div class="overlay">
+      <h5>Project 2</h5>
+      <button onclick="openLightbox(2)">More Info</button>
+      <a href="eventrecord.exe" download>Download</a>
+    </div>
+  </div>
+
+  <div class="gallery-item" data-category="coding">
+  <p class="project-title">Tic Tac Toe</p>
+    <img src="tic-tac-toe.jpg" alt="Project 3" />
+    <div class="overlay">
+      <h5>Project 3</h5>
+      <button onclick="openLightbox(3)">More Info</button>
+       <a href="tick tac toe (1).exe" download>Download</a>
+    </div>
+  </div>
+ <div style="position: relative; top:50%;"class="gallery-item" data-category="coding">
+    <p class="project-title">Expense-Tracker-Website</p>
+    <img src="web1.jpg" alt="Project 4" />
+    <div class="overlay">
+      <h5>Project 4</h5>
+      <button onclick="openLightbox(4)">More Info</button>
+
+    </div>
+  </div>
+  
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Disney</p>
+    <img src="art1.jfif" alt="art-1" />
+    <div class="overlay">
+      <h5>ART-01</h5>
+     
+    </div>
+  </div>
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Anime</p>
+    <img src="art2.jfif" alt="art-2" />
+    <div class="overlay">
+      <h5>ART-02</h5>
+     
+    </div>
+  </div>
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Cat</p>
+    <img src="art3.PNG" alt="art-3" />
+    <div class="overlay">
+      <h5>ART-03</h5>
+     
+    </div>
+  </div>
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Anime</p>
+    <img src="art4.jfif" alt="art-4" />
+    <div class="overlay">
+      <h5>ART-04</h5>
+     
+    </div>
+  </div>
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Butterflies-in-stomach</p>
+    <img src="art5.jfif" alt="art-5" />
+    <div class="overlay">
+      <h5>ART-05</h5>
+     
+    </div>
+  </div>
+  <div  class="gallery-item" data-category="art">
+  <p class="project-title">Snowy-Couple</p>
+    <img src="art6.jfif" alt="art-6" />
+    <div class="overlay">
+      <h5>ART-06</h5>
+     
+    </div>
+  </div>
+
+   <div  class="gallery-item" data-category="art">
+  <p class="project-title">Anime</p>
+    <img src="art7.jfif" alt="art-7" />
+    <div class="overlay">
+      <h5>ART-07</h5>
+     
+    </div>
+  </div>
+   <div  class="gallery-item" data-category="art">
+  <p class="project-title">landscape</p>
+    <img src="art8.jfif" alt="art-8" />
+    <div class="overlay">
+      <h5>ART-09</h5>
+     
+    </div>
+  </div>
+
+</div>
+
+<!-- Hidden section that appears on click -->
+<div class="lightbox" id="lightbox-1">
+  <span class="close-btn" onclick="closeLightbox(1)">×</span>
+  <h2>More Images for Project 1</h2>
+  <div class="lightbox-content">
+    <img src="calculator.jpg" />
+    <img src="project1(a).jpg" />
+  </div>
+</div>
+<div class="lightbox" id="lightbox-2">
+  <span class="close-btn" onclick="closeLightbox(2)">×</span>
+  <h2>More Images for Project 2</h2>
+  <div class="lightbox-content">
+    <img src="players-record-system.jpg" />
+    <img src="project2(a).jpg" />
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox-3">
+  <span class="close-btn" onclick="closeLightbox(3)">×</span>
+  <h2>More Images for Project 3</h2>
+  <div class="lightbox-content">
+    <img src="project3(a).jpg" />
+    <img src="project3(b).jpg" />
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox-4">
+  <span class="close-btn" onclick="closeLightbox(4)">×</span>
+  <h2>More Images for Project 4</h2>
+  <div class="lightbox-content">
+    <img src="Web1.jpg"/>
+    <img src="web2.jpg" />
+    <img src="web3.jpg" />
+    <img src="web4.jpg"/>
+  </div>
+</div>
+  </div>
+
+</div>
+</div>
+<script>
+  function openLightbox(id) {
+    document.getElementById(`lightbox-${id}`).style.display = "flex";
+  }
+
+  function closeLightbox(id) {
+    document.getElementById(`lightbox-${id}`).style.display = "none";
+  }
+</script>
+
+<script>
+  const filters = document.querySelectorAll(".filter");
+  const items = document.querySelectorAll(".gallery-item");
+
+  filters.forEach(filter => {
+    filter.addEventListener("click", () => {
+      const category = filter.getAttribute("data-category");
+
+      filters.forEach(f => f.classList.remove("active"));
+      filter.classList.add("active");
+
+      items.forEach(item => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (category === "all" || itemCategory === category) {
+          item.classList.remove("animate-out");
+          item.classList.add("animate-in");
+          item.style.display = "block";
+        } else {
+          item.classList.remove("animate-in");
+          item.classList.add("animate-out");
+          setTimeout(() => {
+            item.style.display = "none";
+          }, 400); 
+        }
+      });
+    });
+  });
+</script>
+
+  </section>
+
+  <!--Contacts-->
+  <section id="contact" class="slide-section">
+  <span class="close-btn" onclick="closeSection()">×</span>
+  <div class="top_heading">
+    <h1 style="color:white;">Contact</h1>
+  </div>
+  <div class="animated-line"></div>
+
+  <div class="container">
+ 
+  <div class="right-box">
+     
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("4qD2uYwcF9R8Cfxl6");
+</script>
+
+<form id="contact-form">
+  <input type="text" name="from_name" placeholder="Your Name" required />
+  <input type="email" name="from_email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="form-status"></p>
+
+</div>
+
+  </div>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_avfkuo2', 'template_5vxxm7j', this)
+      .then(() => {
+        status.textContent = "Message sent successfully!";
+        status.style.color = "green";
+        form.reset();
+      }, (error) => {
+        status.textContent = "Failed to send message. Please try again.";
+        status.style.color = "red";
+        console.error(error);
+      });
+  });
+</script>
+
+  </section>
+
+
+
+    </body>
+</html>
