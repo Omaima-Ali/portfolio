@@ -21,7 +21,7 @@ function Skills() {
   return (
     <section id="skills" className="w-full h-auto bg-[#1e2229] pt-12 pb-24 md:py-24 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 flex flex-col items-center">
       
-      {/* 🛠️ FIXED STRUCTURE: Added a strict min-height to prevent shifting while loading */}
+      
       <div className="w-full max-w-6xl flex flex-col items-center text-center min-h-[160px] justify-center mb-12">
 
         {/* Aspect-ratio locked image token container */}

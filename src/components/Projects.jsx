@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Import your project showcase images from your assets folder
 import DIP1 from '../assets/DIPpic1.png';
 import expenseTrackerImg from '../assets/expense_tracker.png';
 import linuxImg from '../assets/sna.jpg';
