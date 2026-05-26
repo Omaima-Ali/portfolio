@@ -1,5 +1,5 @@
 import React from 'react';
-import skillsImg from '../assets/Skillsimg.png';
+import skillsImg from '../assets/skillsimg.png';
 function Skills() {
   const techSkills = [
     { name: "React.js", color: "#61DAFB" },
